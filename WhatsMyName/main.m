@@ -10,8 +10,10 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        //Getting my computers name
+        NSHost *name = [NSHost currentHost];
+        NSString *newName =[name localizedName];
+        NSLog(@"my computers name is %@\n", newName);
     }
     return 0;
 }
